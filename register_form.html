@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Register Form</title>
+    <link rel="shortcut icon" href="infotsav logo.png">
+
+    <style>
+        body {
+            background-color: #240982;
+        }
+
+        .html_form form {
+            margin-top: 10px;
+            margin-left: 130px;
+            padding: 20px;
+            box-shadow: 1px 1px 36px pink;
+            width: 70%;
+            text-align: center;
+            background-image: url("bg2.jpg");
+            background-size: cover;
+            border-radius: 10px;
+        }
+
+        .html_form h1 {
+            margin-top: -50px;
+            text-align: center;
+            color: black;
+            font-weight: bold;
+        }
+
+        .html_form input {
+            width: 60%;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .html_form select {
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5px;
+            border-style: double;
+            background-color: lightpink;
+            font-size: medium;
+            font-weight: bolder;
+        }
+
+        .html_form label {
+            text-align: center;
+            font-size: medium;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 550;
+        }
+
+        .html_form form input {
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            border-left: 5px solid palevioletred;
+            padding: 10px;
+            margin: 10px;
+            font-size: medium;
+            font-style: italic;
+
+        }
+
+        .html_form button {
+            border: 1px solid black;
+            border-radius: 5px;
+            text-align: center;
+            font-size: larger;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: black;
+            background-color: pink;
+            margin: 10px;
+
+        }
+
+        label[for="lname"] {
+            padding: 1px;
+        }
+
+        label[for="email_id"] {
+            padding: 25px;
+        }
+
+        label[for="clg"] {
+            padding: 19px;
+        }
+
+        .html_form form input:focus {
+            border-left: 4px solid skyblue;
+            box-shadow: 1px 1px 4px skyblue;
+        }
+
+        .html_form form button:hover {
+            background-color: skyblue;
+        }
+
+        .html_form form button:active {
+            background-color: palevioletred;
+        }
+
+        @media (max-width:991px) {
+            .html_form form {
+                height: 100%;
+                width: 70%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="html_form">
+
+        <form onsubmit="return validation()" method="post" id="register_form" name="register_form">
+            <div>
+                <img class="logo1" src="sv-colleges-logo-dark.png"
+                    style="height: 100px; width: 200px; background:aliceblue; margin-right: 135px; border-radius: 10px;">
+                <img class="logo2" src="infotsav logo.png"
+                    style="height: 100px; width: 200px; background: aliceblue; margin-left: 135px; border-radius: 10px;">
+            </div>
+
+            <h1>Registeration</h1>
+            <label for="fname"> First Name </label>
+            <span id="errorfname" style="color: red;"></span>
+            <input type="text" id="fname" name="Fname" placeholder="First name"><br>
+
+
+            <label for="lname">Last Name</label>
+            <span id="errorlname" style="color: red;"></span>
+            <input type="text" id="lname" name="Lname" placeholder="Last name"><br>
+
+            <label for="roll" style="padding: 30px;">Roll </label>
+            <span id="errorRoll" style="color: red;"></span>
+            <input type="text" id="roll" name="Roll" placeholder="Roll Number"><br>
+
+            <label for="mobile" style="padding: 20px;">Mobile</label>
+            <span id="errorMobile" style="color: red;"></span>
+            <input type="text" id="mobile" name="Mobile" placeholder="Mobile Number"><br>
+
+            <label name="email" for="email_id">Email</label>
+            <span id="erroremail" style="color: red;"></span>
+            <input type="email" id="email_id" name="email_id" placeholder="email"><br>
+
+            <select style="margin-left: 110px;" name="Year">
+                <option>--Year--</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+
+            </select>
+
+            <!--
+            <select name="Branch">
+                <option>--Branch--</option>
+                <option>IT</option>
+                <option>CIVIL</option>
+                <option>EEE</option>
+                <option>ECE</option>
+                <option>CSE</option>
+                <option>MECH</option>
+                <option>CSM</option>
+                <option>CSC</option>
+                <option>CSD</option>
+            </select> -->
+
+            <select name="Events">
+                <option>--Events--</option>
+                <optgroup label="TECHNICAL EVENTS">
+                    <option>DAZZLE CODING</option>
+                    <option>TECHNICAL QUIZ</option>
+                    <option>POSTER PRESENTATION</option>
+                    <option>JAM</option>
+                    <option>BLIND TYPING</option>
+                </optgroup>
+
+                <optgroup label="NON-TECHNICAL EVENTS">
+                    <option>BALL BALANCE</option>
+                    <option>BEST CAPTURE</option>
+                    <option>BALL BLOW</option>
+                    <option>CIRCUIT BIKE RIDE</option>
+                    <option>FOOT PRINT</option>
+                    <option>GOAL KICK</option>
+                    <option>GULLY CRICKET</option>
+                    <option>HIT WICKET</option>
+                    <option>MEHANDI (GIRLS)</option>
+                    <option>MR IT & MRS IT</option>
+                    <option>MUSICAL CHAIRS (GIRLS)</option>
+                    <option>PUBG & FREEFIRE</option>
+                    <option>PANI PURI CHALLENGE</option>
+                    <option>REELS</option>
+                    <option>SLOW BIKE RACE</option>
+                    <option>SUPER SIXES</option>
+                    <option>THUG OF WAR</option>
+                    <option>TREASURE HUNT</option>
+                </optgroup>
+
+            </select>
+            <select name="college">
+
+                <option>--College</option>
+                <option>SVCE</option>
+                <option>SVEC</option>
+
+            </select><br>
+
+
+
+            <!--<label for="clg">College</label>
+            <input type="text" name="College" placeholder="SCVE/SVEC"><br>-->
+
+            <!--<button type="reset">Refresh</button>-->
+            <button type="submit">Register</button>
+
+
+        </form>
+
+    </div>
+
+</body>
+
+
+<script type="text/javascript">
+
+    function validation() {
+        var fname = document.getElementById('fname').value;
+        var lname = document.getElementById('lname').value;
+        var email = document.getElementById('email_id').value;
+        var roll  = document.getElementById('roll').value;
+
+
+        var fname_check = /^[A-Za-z]{3,20}$/;
+        var lname_check = /^[A-Za-z]{3,20}$/;
+        var email_check = /^[A-Za-z_0-9]{3,}@[A-Za-z]{3,10}[.]{1}[A-Za-z]{3,}$/;
+        var roll_check  = /^[0-2]{2}[B-Fb-f_0-9]{2}[1]{1}[aA]{1}[1-2]{2}[A-Za-z_0-9]{2}$/;
+
+        if (fname_check.test(fname)) {
+            document.getElementById('errorfname').innerHTML = " ";
+        }
+        else {
+            document.getElementById('errorfname').innerHTML = "**Invalid First Name";
+            /*response => alert('Thank you for Registering ! Enter a valid detail Have a Great Day : )')*/
+            return false;
+        }
+
+
+
+        if (lname_check.test(lname)) {
+            document.getElementById('errorlname').innerHTML = " ";
+        }
+        else {
+            document.getElementById('errorlname').innerHTML = "**Invalid Last Name";
+            return false;
+        }
+
+
+
+        if (email_check.test(email)) {
+            document.getElementById('erroremail').innerHTML = " ";
+        }
+        else {
+            document.getElementById('erroremail').innerHTML = "**InvalidEmailFormat";
+            return false;
+        }
+
+        if (roll_check.test(roll)) {
+            document.getElementById('errorRoll').innerHTML = " ";
+        }
+        else {
+            document.getElementById('errorRoll').innerHTML = "**InvalidRollNumber";
+            return false;
+        }
+
+
+
+    }
+
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwrjrBXG9DJnrc3tU6h8Shw_Znj2TiXJWg4IlsdkyIX4WPo7MpnpzqfkH6IX9UZOioDRw/exec"
+
+    const form = document.forms['register_form']
+
+    form.addEventListener("submit", e => {
+        e.preventDefault()
+        fetch(scriptURL, {
+            method: "POST",
+            body: new FormData(form)
+        }).then(
+            response => alert('Thank you for Registering ! Have a Great Day : )')
+        ).catch(
+            error => console.error("Error!", error.message)
+        )
+        form.reset();
+    })
+
+</script>
+
+</html>
