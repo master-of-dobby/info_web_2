@@ -103,7 +103,7 @@ h3
     right: 30px;
     top: -210px;
     z-index: 1;
-    box-shadow: 0 0 40px rgba(0,0,0,1);
+    box-shadow: 0 0 40px #024980;
     width: 10%;
     height: 5%;
     background-color: transparent;
@@ -129,4 +129,130 @@ h3
 }
 h3 span{
     color: orange;
+}
+
+@media(max-width:991px){
+    .infostav{
+        display: flex;
+        position:relative;
+        width:480px;
+        height: 520px;
+        overflow: hidden;
+        transform: scale(.8);
+        animation: zoomin 4s linear;
+    }
+    
+
+    @keyframes zoomin {
+        0%
+        {
+            -webkit-transform: scale(0.8);
+        }
+        100%
+        {
+            -webkit-transform: scale(1);
+        }
+    }
+    .infostav:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -100px;
+        width: 100%;
+        height: 120px;
+        background: #024980;
+        z-index: 2;
+        border-top-left-radius: 100%;
+        border-top-right-radius: 100%;
+        transform: scaleX(1.5);
+    }
+    h3
+    {
+        position: relative;
+        display: block;
+        margin:0;
+        padding-bottom: 150px;
+        padding-left: 70px;
+        text-align: center;
+        left: -30px;
+        font-family: sans-serif;
+        color:white;
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 15px;
+    }
+    .infostav::after
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 400%;
+        height: 100%;
+        background: linear-gradient(to right,transparent,#024980, #024980);
+        z-index: 3;
+        animation: animate 5s linear forwards;
+    }
+    @keyframes animate{
+        0%
+        {
+            right: 0;
+        }
+        100%
+        {
+            right: -500%;
+        }
+    }
+    .infostav span
+    {
+        display: flex;
+        position: absolute;
+        top: 0;
+        width: 120px;
+        background: #fff;
+    }
+    .infostav span:nth-child(1)
+    {
+        background: orange;
+        left: 0;
+        animation: BottomToTop 1s linear forwards;
+
+    }
+    @keyframes BottomToTop {
+        from{
+            height: 0%;
+        }
+        to{
+            height: 100%;
+        }
+    }
+    .infostav span:nth-child(2)
+    {
+        right: 30px;
+        top: -210px;
+        z-index: 1;
+        box-shadow: 0 0 40px #024980;
+        width: 10%;
+        height: 5%;
+        background-color: transparent;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border: 55px solid orange;
+        border-bottom: 0;
+        transform: rotate(90deg);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background:orange;
+        transform-origin: top-left;
+        animation: BottomToTop 1s linear forwards;
+        animation-delay: 1s;
+    }
+    .infostav span:nth-child(3)
+    {
+        background: orange;
+        right: 112px;
+        animation: BottomToTop 1s linear forwards;
+        animation-delay: 2s;
+    }
 }
